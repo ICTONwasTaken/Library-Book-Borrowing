@@ -17,6 +17,14 @@ def get_books():
     return jsonify(books)
 
 
+@app.get("/books/<int:book_id>")
+def get_book(book_id):
+    book = next((book for book in books if book["id"] == book_id), None)
+    if book is None:
+        return jsonify({"error": "Book not found"}), 404
+    return jsonify(book)
+
+
 @app.put("/books/<int:id>/<action>")
 def update_book(id, action):
 
