@@ -3,18 +3,9 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 books = [
-    {
-        "id": 1,
-        "title": "Python Basics",
-        "available": True
-    },
-    {
-        "id": 2,
-        "title": "Database Systems",
-        "available": True
-    }
+    {"id": 1, "title": "The Hobbit", "author": "J.R.R. Tolkien"},
+    {"id": 2, "title": "Pride and Prejudice", "author": "Jane Austen"},
 ]
-
 
 @app.get("/")
 def home():
