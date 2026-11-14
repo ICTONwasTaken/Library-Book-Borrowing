@@ -1,11 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
 books = [
-    {"id": 1, "title": "The Hobbit", "author": "J.R.R. Tolkien" , "available": False},
-    {"id": 2, "title": "Pride and Prejudice", "author": "Jane Austen", "available": False},
-    {"id": 3, "title": "Noli Me Tangere", "author": "Jose Rizal", "available": False}
+    {"id": 1, "title": "The Hobbit", "author": "J.R.R. Tolkien" , "available": True},
+    {"id": 2, "title": "Pride and Prejudice", "author": "Jane Austen", "available": True},
+    {"id": 3, "title": "Noli Me Tangere", "author": "Jose Rizal", "available": True}
 ]
 
 @app.get("/")
